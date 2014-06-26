@@ -12,11 +12,11 @@ app.directive('portfilter', function () {
                 // selector = '$("li[data-primary=\'' + scope.obj + '\']")';
                 // $portfolio.isotope({ filter: selector });
                 
-                filterString = "li[data-" + elem.attr("data-filter") + '="' + scope.obj + '"]';
+                //filterString = "li[data-" + elem.attr("data-filter") + '="' + scope.obj + '"]';
                 scope.setFilter(elem.attr("data-filter"), scope.obj);
                 
-                selector = $(filterString);
-                $portfolio.isotope({ filter: selector });
+               // selector = $(filterString);
+               // $portfolio.isotope({ filter: selector });
                 //$portfolio.isotope({ filter: $("li[data-primary='Graphics']") })
                  
             });

@@ -51,6 +51,7 @@ jQuery(function($) {
             $portfolio.isotope({ filter: selector });
             return false;
         });
+        
     });
     
     filterString = "";
