@@ -187,7 +187,7 @@ a:focus {
   margin-right: -20px;
 }
 .portfolio-filter {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .portfolio-filter > li {
@@ -197,6 +197,9 @@ a:focus {
   float: left;
   padding: 0;
   margin: 0;
+}
+.portfolio-items.col-1 > li {
+  width: 100%;
 }
 .portfolio-items.col-2 > li {
   width: 50%;
@@ -227,6 +230,10 @@ a:focus {
 }
 .portfolio-item img {
   width: 100%;
+}
+
+.portfolio-item .abstract-image {
+  width: 100px;
 }
 .portfolio-item .portfolio-image {
   position: relative;
@@ -640,4 +647,26 @@ textarea#message {
 
 .tint {
      background-color: #8e44ad;
+}
+
+.filter-panel>table>tbody>tr>td {
+  padding: 0;
+  text-align: left;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.filter-panel>table {
+  table-layout: fixed;
+}
+
+.filter-panel {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modalInfo  img {
+  width:300px;
+  padding: 10px;
 }

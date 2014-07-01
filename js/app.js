@@ -21,13 +21,15 @@ app.directive('portfilter', function () {
                  
             });
            
-            elem.on('mouseenter', function () {
-                selector = $("li[data-primary='" + scope.obj + "']");
+            elem.on('mouseenter', function () {                
+                filterString = "li[data-" + elem.attr("data-filter") + '="' + scope.obj + '"]';
+                selector = $(filterString);
                 selector.addClass("tint");
             });
             
             elem.on('mouseleave', function () {
-                selector = $("li[data-primary='" + scope.obj + "']");
+                filterString = "li[data-" + elem.attr("data-filter") + '="' + scope.obj + '"]';
+                selector = $(filterString);
                 selector.removeClass("tint");
             });
         

@@ -58,91 +58,124 @@
         <div id="content" ng-app="MyAngularApp" ng-controller="MainController">
             <div class="container-fluid" style="padding:5px 20px 10px 40px">
 
-                    <div class="row">
-                    <div class="col-md-10 box" style="height:800px; overflow: auto">
-                        <ul class="portfolio-items col-8">
-                            <li class="portfolio-item" ng-repeat="obj in research" ng-attr-data-primary="{{obj.primary}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-year="{{obj.tags['year'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
-                            
-                                <div class="item-inner">
-                                    <div class="portfolio-image">
-                                        <img ng-src="images/{{obj.img}}" alt="">
-
-                                        
-                                        <div class="overlay">
-                                            <a class="btn" ng-click="showInfo(obj)" title="{{obj.caption}}"><i class="icon-eye-open"></i></a>
-               <!--                             <a class="preview btn btn-danger" title="{{obj.caption}}" href="images/{{obj.img}}"><i class="icon-eye-open"></i></a>
-               -->
-
-                                        </div>
-                                            
-                                    </div>
-                                    <h5>{{obj.caption}}</h5>    
-                                </div>
-                            </li><!--/.portfolio-item-->
-                            </
-                        </ul>
-                    </div>
-                    <div class="col-md-2" style="height:800px; overflow:auto">
-
-                        <button ng-click="clearFilter()">Show All</button>
-                 
-
-                        <div class="panel-group portfolio-filter" ng-repeat ="tag in tags">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" ng-href="#acc{{tag}}">
-                                            {{tag}}
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="acc{{tag}}" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <table class="table-condensed table-hover">
-                        
-                                            <tbody>
-                                                <tr ng-repeat="obj in values[tag]">                                                  
-                                                    <td>
-                                                        <h6>
-                                                            <portfilter ng-attr-data-filter="{{tag}}"/>
-                                                        </h6>
-                                                    </td>
-                                                    <td>
-                                                        <h6>
-                                                            {{valueCounts[tag][$index]}}
-                                                        </h6>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>              
+                <div class="row">
+                        <div class="col-md-10 box" style="height:800px; overflow: auto">
+                        <ng-include src="'abstractLayout.html'"></ng-include>
+<!--                            <ng-include src="'tileLayout.html'"></ng-include>
+ -->        
                         </div>
-                    </div>
+                        <ng-include src="'filterPanel.html'"></ng-include>
+                            
                 </div>
+                    
             </div>
 
             <div>
     <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title">{{selObj.caption}}</h3>
-        </div>
-        <div class="portfolio-image">
-        <img class="img-responsive" ng-src="images/{{selObj.img}}" alt="">
-        </div>
-        <h5> {{selObj.publication}} 
-        </h5>
-        <div class="modal-body">
-           <h6> Abstract: {{selObj.pabstract}}</h6>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="ok()">OK</button>
-
+        <div class="modalInfo">
+                <div class="modal-header">
+                    <h3 class="modal-title">{{selObj.caption}}</h3>
+                </div>
+                <img class="img-responsive" ng-src="images/{{selObj.img}}" alt=""> </img>
+                <a class="btn" ng-href="{{selObj.video}}">VIDEO</a>
+                <a class="btn" ng-href="{{selObj.pdf}}">PDF</a>        
+            
+                <div class="modal-body">
+                        
+                   <h5> Reference: {{selObj.reference}} 
+                   </h5>
+                   <h6> Abstract: {{selObj.pabstract}}</h6>
+                </div>
+                
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="ok()">OK</button
+                </div>
         </div>
     </script>
 
-</div>
+    <script type="text/ng-template" id="tileLayout.html">
+        
+        <ul class="portfolio-items col-8">
+            <li class="portfolio-item" ng-repeat="obj in research" ng-attr-data-primary="{{obj.primary}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-year="{{obj.tags['year'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
+            
+                <div class="item-inner">
+                    <div class="portfolio-image" ng-mouseenter="addselect(obj)" ng-mouseleave="removeselect(obj)" ng-click="showInfo(obj)">
+                        <img ng-src="images/{{obj.img}}" alt="">
+                        
+                        <div class="overlay">
+                            <a class="btn"  title="{{obj.caption}}"><i class="icon-eye-open"></i></a>
+                        </div>
+                            
+                    </div>
+                    <h5>{{obj.caption}}</h5>    
+                </div>
+            </li><!--/.portfolio-item-->
+        </ul>
+         
+    </script>
+    
+    <script type="text/ng-template" id="abstractLayout.html">
+        
+        <ul class="portfolio-items col-1">
+            <li class="portfolio-item" ng-repeat="obj in research" ng-attr-data-primary="{{obj.primary}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-year="{{obj.tags['year'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
+            <div class="row" style="border:solid 1px">
+                <div class="col-md-2">
+                    <div ng-mouseenter="addselect(obj)" ng-mouseleave="removeselect(obj)" ng-click="showInfo(obj)">
+                        <img class="portfolio-image" ng-src="images/{{obj.img}}" alt="" style="padding: 10px">                                                    
+                    </div>                    
+                </div>
+                <div class="col-md-10">                        
+                        <h3>{{obj.caption}}</h3>
+                        <h6>{{obj.reference}}</h6>
+                        {{obj.pabstract}}
+                </div>
+
+            </li><!--/.portfolio-item-->
+        </ul>
+         
+    </script>
+    
+    
+    <script type="text/ng-template" id="filterPanel.html">
+        <div class="col-md-2" style="height:800px; overflow:auto">
+                <button ng-click="clearFilter()">Show All</button>
+         
+
+                <div class="panel-group portfolio-filter" ng-repeat ="tag in tags">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" ng-href="#acc{{tag}}">
+                                    {{tag}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="acc{{tag}}" class="panel-collapse collapse in">
+                            <div class="panel-body filter-panel">
+                                <table class="table table-hover">
+                
+                                    <tbody>
+                                        <tr ng-repeat="obj in values[tag]" ng-class="selectedIsOn(obj,tag)">
+                                            <td width="10px">
+                                                <span class="glyphicon glyphicon-ok" ng-show="filterIsOn(obj,tag)"></span>                                                
+
+                                            <td width="95px">            
+                                                    <portfilter ng-attr-data-filter="{{tag}}"/>
+                                            </td>
+                                            <td width="20px">
+                                                    {{valueCounts[tag][$index]}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>              
+                </div>
+        </div>
+    
+    </script>
+ </div>
     </section>
    
 

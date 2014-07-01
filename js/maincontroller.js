@@ -39,7 +39,12 @@
     
     $scope.setFilter = function (attribute, value)
     {
-        $scope.filters[attribute].push(value);
+        var myIndex = $scope.filters[attribute].indexOf(value);
+        if (myIndex > -1) {
+            $scope.filters[attribute].splice(myIndex,1);
+        } else {
+            $scope.filters[attribute].push(value);
+        }
         $scope.recalculate();
     
         $scope.$apply();
@@ -112,7 +117,37 @@
         });
         return(pass);   
     }
-
+    
+    $scope.filterIsOn = function(aValue, tag)
+    {
+        return($.inArray(aValue, $scope.filters[tag]) > -1);
+    }
+    
+    $scope.addselect = function(obj)
+    {
+        $scope.selectedObject = obj;
+    }
+    
+    $scope.removeselect = function(obj)
+    {
+        $scope.selectedObject = null;
+    }
+    
+    $scope.selectedIsOn = function(obj,tag)
+    {
+        if ($scope.selectedObject != null) {
+            l0 = $scope.selectedObject.tags[tag];
+            if ($.inArray(obj,l0)>-1) {
+                return("tint");
+            } else {
+                return("");
+            }
+            return("");
+        } else {
+            return("");
+        }
+    }
+    
     $scope.items = ['item1', 'item2', 'item3'];
     $scope.recalculate();
     $scope.open = function (size) {
