@@ -1,24 +1,41 @@
-﻿app.controller("MainController", function ($scope, $modal,$log) {
+﻿app.controller("MainController", function ($scope, $modal,$log, $timeout) {
     globalScope = $scope;
     $scope.selectedResearch = 0;
-    $scope.research = myData.data;
+    $scope.research = fixupData(myData.data);
+    
+    
     $scope.filteredResearch = research;
     
     $scope.primary = _.uniq(_.map(myData.data, function (d) { return d.primary }))
     $scope.filters = {};
     $scope.tags = ["publication", "year", "collaborators", "subject"];
+    $scope.sortKeys = ["caption","year"];
     globaltags = $scope.tags;
     _.each($scope.tags, function(t) {$scope.filters[t] = []});
     $scope.values = {};
     $scope.valueCounts = {};
     myValues = {};
+    $scope.radioModel = 'Icons';
+    $scope.ascending = false;
+    $scope.sortBy = "year";
     
+
+    // since changing the radiomodel causes a change in the layout to the portfolio items
+    // we need to reset isotope to the new list
+    // but we need to wait until after it's done a layout hence the timeout
+    $scope.$watch('radioModel', function() {
+          $timeout(function(){
+            resetPortfolio($scope.sortBy, $scope.ascending);
+            $scope.recalculate();
+          }, 1);        
+   });
     
+
     //$scope.primary = _.uniq(_.map(myData.data, function (d) { return d.primary }))
     /*_.each($scope.tags, function (t) {
         valueList = _.groupBy(_.flatten(_.map(myData.data, function (d) { return d.tags[t] })));
         $scope.values[t] = _.map(valueList, function (d) { return d[0] });
-        $scope.valueCounts[t] = _.map(valueList, function (d) { return d.length });
+        $scope.valueCounts[t] = _.map(valueList, function (d) { return d.length }); 
  //       myValues[t] = _.uniq(_.flatten(_.map(myData.data, function (d) { return d.tags[t] })));
     });
 */
@@ -62,11 +79,24 @@
         });
         $scope.filteredResearch = _.filter($scope.research, function(d) {return $scope.passFilter(d,"*")});
         if (typeof($portfolio) != 'undefined') {
-             $portfolio.isotope({ filter: function() {tempObj = this; return $scope.isotopeFilter(tempObj)}});            
+            $portfolio.isotope({
+                itemSelector : 'li',
+                layoutMode : 'fitRows',
+                filter: function() {tempObj = this; return $scope.isotopeFilter(tempObj)},            
+                getSortData: {
+                    year: '[data-year]',
+                    caption: '[data-caption]'
+                },
+                sortBy: $scope.sortBy,
+                sortAscending: $scope.ascending       
+            });
         }
   //      $scope.$apply();    
     }
-
+    
+    $scope.sortPortfolio = function(key, dir) {
+        resetPortfolio(key, dir);
+    }
     $scope.clearFilter = function () {
 //        $scope.filterString = $(".portfolio-items li");
 //        $portfolio.isotope({ filter: $("*") });
@@ -206,3 +236,24 @@ function passFilter(obj, which) {
     return(pass);
 }
 
+function resetPortfolio(sortValue, ascending) {
+    $portfolio = $('.portfolio-items');
+    $portfolio.isotope({
+        itemSelector : 'li',
+        layoutMode : 'fitRows',
+        getSortData: {
+            year: '[data-year]',
+            caption: '[data-caption]'
+        },
+        sortBy: sortValue,
+        sortAscending: ascending       
+    });
+    $portfolio.isotope('updateSortData').isotope();
+}
+
+
+function fixupData(val)
+{
+    b=_.map(val, function(a) {a["year"] = a.tags["year"][0]; return(a)});
+    return(b);
+}
