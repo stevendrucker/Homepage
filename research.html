@@ -62,7 +62,9 @@
                                 <div class="btn-group col-md-6">
                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Icons'">Icons</label>
                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Details'">Details</label>
-                                       <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Publications'">Publications</label>                    
+                                       <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Publications'">Publications</label>
+                                       <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Timeline'">Timeline</label>                    
+
                                </div>
                                 <div class="btn-group" dropdown is-open="status.isopen">
                                         <button type="button" class="btn btn-primary dropdown-toggle">
@@ -84,7 +86,10 @@
                                 </div>
                                <div ng-switch-when="Publications">                        
                                         <ng-include src="'publicationLayout.html'"></ng-include>
-                                </div>                               
+                                </div>
+                                <div ng-switch-when="Timeline">                        
+                                        <ng-include src="'timelineLayout.html'"></ng-include>
+                                </div>   
                                
                         </div>
                                 
@@ -94,7 +99,8 @@
 
             </div>
 
-            <div>
+         <div>
+
     <script type="text/ng-template" id="myModalContent.html">
         <div class="modalInfo">
                 <div class="modal-header">
@@ -158,7 +164,7 @@
          
     </script>
     
-        <script type="text/ng-template" id="publicationLayout.html">
+    <script type="text/ng-template" id="publicationLayout.html">
           
         <ol class="portfolio-items col-1 media-list"">
             <li class="portfolio-item media" ng-repeat="obj in research" ng-attr-data-caption="{{obj.caption}}" ng-attr-data-primary="{{obj.primary}}"  ng-attr-data-year="{{obj.year}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-year="{{obj.tags['year'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
@@ -170,6 +176,9 @@
          
     </script>
     
+    <script type="text/ng-template" id="timelineLayout.html">
+        <gh-visualization val="filteredResearch"></gh-visualization>
+    </script>
     
     <script type="text/ng-template" id="filterPanel.html">
         <div class="col-md-2" style="height:800px; overflow:auto">
@@ -180,6 +189,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
+                                      
                                 <a data-toggle="collapse" data-parent="#accordion" ng-href="#acc{{tag}}">
                                     {{tag}}
                                 </a>
@@ -188,7 +198,6 @@
                         <div id="acc{{tag}}" class="panel-collapse collapse in">
                             <div class="panel-body filter-panel">
                                 <table class="table table-hover">
-                
                                     <tbody>
                                         <tr ng-repeat="obj in values[tag]" ng-class="selectedIsOn(obj,tag)">
                                             <td width="10px">
@@ -218,7 +227,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
     <script src="js/isotope.pkgd.js"></script>
-
+    <script src="js/d3.v3.min.js"></script>
 <!--
     <script src="js/jquery.isotope.min.js"></script>
 -->

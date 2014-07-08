@@ -109,6 +109,10 @@
     //    $scope.$apply();
     }
 
+    $scope.getParentScope = function()
+    {
+        return($scope);
+    }
     $scope.showInfo = function(obj) {
         // alert("Show Info " + obj.caption);
         $scope.selObj = obj;
