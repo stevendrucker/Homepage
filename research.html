@@ -45,7 +45,6 @@
                         <li class="special"><a href="index.html#bio">Bio</a></li>
                         <li class="special"><a href="#featured">Featured</a></li>
                         <li><a href="research.html">Research</a></li>
-                        <li class="special"><a href="index.html#timeline">timeline</a></li>
                         <li class="special"><a href="index.html#CV">CV</a></li>
 
                     </ul>
@@ -63,7 +62,8 @@
                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Icons'">Icons</label>
                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Details'">Details</label>
                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Publications'">Publications</label>
-                                       <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Timeline'">Timeline</label>                    
+                                       <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Timeline'">Timeline</label>
+                                        <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Keywords'">Keywords</label>  
 
                                </div>
                                 <div class="btn-group" dropdown is-open="status.isopen">
@@ -89,7 +89,11 @@
                                 </div>
                                 <div ng-switch-when="Timeline">                        
                                         <ng-include src="'timelineLayout.html'"></ng-include>
+                                </div>
+                                <div ng-switch-when="Keywords">                        
+                                        <ng-include src="'keywordLayout.html'"></ng-include>
                                 </div>   
+
                                
                         </div>
                                 
@@ -180,6 +184,12 @@
         <gh-visualization val="filteredResearch"></gh-visualization>
     </script>
     
+    
+    <script type="text/ng-template" id="keywordLayout.html">
+        <gh-keywordvisualization val="filteredResearch"></gh-keywordvisualization>
+    </script>
+        
+        
     <script type="text/ng-template" id="filterPanel.html">
         <div class="col-md-2" style="height:800px; overflow:auto">
                 <button ng-click="clearFilter()">Show All</button>

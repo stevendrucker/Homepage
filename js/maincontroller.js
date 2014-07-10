@@ -96,6 +96,11 @@
     
     $scope.sortPortfolio = function(key, dir) {
         resetPortfolio(key, dir);
+        $scope.filteredResearch = _.sortBy($scope.filteredResearch, key);
+        if (dir) {
+            $scope.filteredResearch.reverse();
+        }
+        
     }
     $scope.clearFilter = function () {
 //        $scope.filterString = $(".portfolio-items li");
