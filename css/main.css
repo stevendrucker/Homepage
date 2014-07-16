@@ -670,3 +670,14 @@ textarea#message {
   width:300px;
   padding: 10px;
 }
+
+
+.columnline {
+    stroke: black;
+    stroke-width: .1px;
+}
+
+.highlighted {
+    stroke: purple;
+    stroke-width: 1px;
+}

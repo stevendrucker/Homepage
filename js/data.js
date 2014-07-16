@@ -1,4 +1,119 @@
-﻿var myData = {"data": [
+﻿var myData = {
+    "data": [
+  
+{
+             "tags": {
+                 "subject": ["Information", "Visualization"],
+                "publication": ["TKDE"],
+                "year": ["2014"],
+                "collaborators": ["Liu", "Chen","Wei","Yang","Zhou"]
+             },
+
+             "img": "researchImages/leadlag.png",
+             "caption": "Topic-Lead-Lag",
+             "primary": "Visualization",
+             "reference": "Liu, S., Chen, Y., Wei, H., Yang, J., Zhou, K., & Drucker, S. M. Exploring Topical Lead-Lag across Corpora.",
+             "pdf": "http://research.microsoft.com/en-us/um/people/shliu/TextPioneerTKDE.pdf",
+             "video": "http://research.microsoft.com/en-us/people/sdrucker/video/demowiz.mp4",
+             "pabstract": "Identifying which text corpus leads in the context of a topic presents a great challenge of considerable interest to researchers. Recent research into lead-lag analysis has mainly focused on estimating the overall leads and lags between two corpora. However, real-world applications have a dire need to understand lead-lag patterns both globally and locally. In this paper, we introduce TextPioneer, an interactive visual analytics tool for investigating lead-lag across corpora from the global level to the local level. In particular, we extend an existing lead-lag analysis approach to derive two-level results. To convey multiple perspectives of the results, we have designed two visualizations, a novel hybrid tree visualization that couples a radial space-filling tree with a node-link diagram and a twisted-ladder-like visualization. We have applied our method to several corpora and the evaluation shows promise, especially in support of text comparison at different levels of detail.",
+             "id": 0
+},
+         {
+             "tags": {
+                 "subject": ["UI", "Presentation"],
+                 "publication": ["SIGCHI"],
+                 "year": ["2013"],
+                 "collaborators": ["Chi", "Lee"]
+             },
+             "img": "researchImages/demowiz.png",
+             "caption": "Demowiz",
+             "primary": "Presentations",
+             "reference": "Chi, Pei-Yu, Bongshin Lee, and Steven M. Drucker. DemoWiz: re-performing software demonstrations for a live presentation. Proceedings of the 32nd annual ACM conference on Human factors in computing systems. ACM, 2014.",
+             "pdf": "http://research.microsoft.com/en-us/um/people/sdrucker/papers/demowiz.pdf",
+             "video": "http://research.microsoft.com/en-us/people/sdrucker/video/demowiz.mp4",
+             "pabstract": "Showing a live software demonstration during a talk can be engaging, but it is often not easy: presenters may struggle with (or worry about) unexpected software crashes and  encounter issues such as mismatched screen resolutions or faulty network connectivity.  Furthermore, it can be difficult to recall the steps to show while talking and operating the  system all at the same time. An alternative is to present with pre-recorded screencast videos. It is, however, challenging to precisely match the narration to the video when using existing video players. We introduce DemoWiz, a video presentation system that provides an increased awareness of upcoming actions through glanceable visualizations. DemoWiz supports better control of timing by overlaying visual cues and enabling lightweight editing. A user study shows that our design significantly improves the presenters’ perceived ease of narration and timing compared to a system without visualizations that was similar to a standard playback control. Furthermore, nine (out of ten) participants preferred DemoWiz over the standard playback control with the last expressing no preference.",
+             "id": 0
+         },
+         {
+             "tags": {
+                 "subject": ["Visualization", "Information", "Design"],
+                 "publication": ["AVI"],
+                 "year": ["2013"],
+                 "collaborators": ["Bigelow", "Fisher","Meyer"]
+             },
+             "img": "researchImages/DesignReflections.png",
+             "caption": "DesignReflections",
+             "primary": "Visualization",
+             "reference": "Alex Bigelow, Steven Drucker, Danyel Fisher, and Miriah Meyer, Reflections on How Designers Design With Data, in AVI 2014 International Working Conference on Advanced Visual Interfaces, ACM, May 2014",
+             "pdf": "http://research.microsoft.com/apps/pubs/default.aspx?id=217732",
+             "video": "http://research.microsoft.com/apps/pubs/default.aspx?id=217732",
+             "pabstract": "In recent years many popular data visualizations have emerged that are created largely by designers whose main area of expertise is not computer science. Designers generate these visualizations using a handful of design tools and environments. To better inform the development of tools intended for designers working with data, we set out to understand designers' challenges and perspectives. We interviewed professional designers, conducted observations of designers working with data in the lab, and observed designers working with data in team settings in the wild. A set of patterns emerged from these observations from which we extract a number of themes that provide a new perspective on design considerations for visualization tool creators, as well as on known engineering problems.",
+             "id": 0
+         },
+         {
+             "tags": {
+                 "subject": ["UI"],
+                 "publication": ["Interact"],
+                 "year": ["2013"],
+                 "collaborators": ["Morris", "Danielescu","Fisher", "Lee", "schraefel","Wobbrock"]
+             },
+             "img": "researchImages/gestureelicitation.png",
+             "caption": "GestureElicitation",
+             "primary": "UI",
+             "reference": "Meredith Ringel Morris, Andreea Danielescu, Steven Drucker, Danyel Fisher, Bongshin Lee, m.c. schraefel, and Jacob O. Wobbrock, Reducing Legacy Bias in Gesture Elicitation Studies, in ACM Interactions Magazine, ACM, May 2014",
+             "pdf": "http://research.microsoft.com/apps/pubs/default.aspx?id=208568",
+             "video": "http://research.microsoft.com/apps/pubs/default.aspx?id=208568",
+             "pabstract": "Improving methods for choosing appropriate gestures for novel user interaction techniques.",
+             "id": 0
+         },
+         {
+             "tags": {
+                 "subject": ["Visualization"],
+                 "publication": ["CGA"],
+                 "year": ["2013"],
+                 "collaborators": ["Fisher", "Konig"]
+             },
+             "img": "researchImages/incrvis.png",
+             "caption": "IncrementalVis",
+             "primary": "Visualization",
+             "reference": "Danyel Fisher, Steven M. Drucker, and A. Christian König, Exploratory Visualization Involving Incremental, Approximate Database Queries and Uncertainty, in IEEE Computer Graphics and Applications, IEEE, July 2012",
+             "pdf": "http://research.microsoft.com/apps/pubs/default.aspx?id=208568",
+             "video": "http://research.microsoft.com/apps/pubs/default.aspx?id=208568",
+             "pabstract": "Large datasets can mean slow queries, for which users must wait. Incremental visualization systems can give faster results at a cost of accuracy. This article asked analysts to use one and report on their results. Their feedback provides suggestions for alternative visualizations to represent a query still in progress.",
+             "id": 0
+         },
+         {
+             "tags": {
+                 "subject": ["Information"],
+                 "publication": ["Sigmod"],
+                 "year": ["2013"],
+                 "collaborators": ["Barnett", "Chandramouli","DeLine","Fisher", "Goldstein", "Morrison","Platt"]
+             },
+             "img": "researchImages/stat.png",
+             "caption": "Stat!",
+             "primary": "Information",
+             "reference": "Mike Barnett, Badrish Chandramouli, Robert DeLine, Steven Drucker, Danyel Fisher, Jonathan Goldstein, Patrick Morrison, and John Platt, Stat! - An Interactive Analytics Environment for Big Data, in ACM SIGMOD International Conference on Management of Data (SIGMOD 2013), ACM SIGMOD, June 2013",
+             "pdf": "http://research.microsoft.com/pubs/194060/stat-sigmod2013-demo.pdf",
+             "video": "http://research.microsoft.com/pubs/194060/stat-sigmod2013-demo.pdf",
+             "pabstract": "Exploratory analysis on big data requires us to rethink data management across the entire stack – from the underlying data processing techniques to the user experience. We demonstrate Stat! – a visualization and analytics environment that allows users to rapidly experiment with exploratory queries over big data. Data scientists can use Stat! to quickly refine to the correct query, while getting immediate feedback after processing a fraction of the data. Stat! can work with multiple processing engines in the backend; in this demo, we use Stat! with the Microsoft StreamInsight streaming engine. StreamInsight is used to generate incremental early results to queries and refine these results as more data is processed. Stat! allows data scientists to explore data, dynamically compose multiple queries to generate streams of partial results, and display partial results in both textual and visual form",
+             "id": 0
+         },
+         {
+             "tags": {
+                 "subject": ["Information", "Visualization", "Presentation"],
+                 "publication": ["Infovis"],
+                 "year": ["2013"],
+                 "collaborators": ["Hullman", "Riche","Fisher", "Adar","Lee"]
+             },
+             "img": "researchImages/narratives.png",
+             "caption": "Narrative",
+             "primary": "Visualization",
+             "reference": "Hullman, J., Drucker, S., Henry Riche, N., Lee, B., Fisher, D., & Adar, E. (2013). A deeper understanding of sequence in narrative visualization. Visualization and Computer Graphics, IEEE Transactions on, 19(12), 2406-2415.",
+             "pdf": "http://research.microsoft.com/en-us/um/people/sdrucker/papers/narrative.pdf",
+             "video": "http://research.microsoft.com/en-us/people/sdrucker/papers/",
+             "pabstract": "         Conveying a narrative with visualizations often requires choosing an order in which to present visualizations. While evidence exists that narrative sequencing in traditional stories can affect comprehension and memory, little is known about how sequencing choices affect narrative visualization. We consider the forms and reactions to sequencing in narrative visualization presentations to provide a deeper understanding with a focus on linear, slideshow-style presentations. We conduct a qualitative analysis of 42 professional narrative visualizations to gain empirical knowledge on the forms that structure and sequence take. Based on the results of this study we propose a graph-driven approach for automatically identifying effective sequences in a set of visualizations to be presented linearly. Our approach identifies possible transitions in a visualization set and prioritizes local (visualization-to-visualization) transitions based on an objective function that minimizes the cost of transitions from the audience perspective. We conduct two studies to validate this function. We also expand the approach with additional knowledge of user preferences for different types of local transitions and the effects of global sequencing strategies on memory, preference, and comprehension. Our results include a relative ranking of types of visualization transitions by the audience perspective and support or memory and subjective rating benefits of visualization sequences that use parallelism as a structural device. We discuss how these insights can guide the design of narrative visualization and systems that support optimization of visualization sequence.",
+             "id": 0
+         },
   {
       "tags":{ "subject":["UI", "Information","Visualization","Touch"],
           "publication":["InternalReport"],

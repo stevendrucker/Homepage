@@ -256,7 +256,7 @@ function keywordLayout(svg, theData, scope)
     var width = $('svg').width();
     var height = $('svg').height();
     var marginx = 150;
-    var marginy = 100;
+    var marginy = 150;
     svg.append("g")
         .attr("transform", "translate(0, 0)");
               
@@ -293,23 +293,45 @@ function keywordLayout(svg, theData, scope)
       .attr("dy", ".32em")
       .attr("text-anchor", "end")
       .attr("fill","black")
-      .text(function(d, i) { return d; });
+      .text(function (d, i) { return d; });
+
+    row.append("line")
+    .attr("x1", 141)
+    .attr("y1", 2)
+    .attr("x2", function (d) { return width - marginx })
+    .attr("y2", 2)
+    .attr("stroke", "black")
+    .attr("stroke-width", .1)
       
-    var col = svg.selectAll(".col")
+    var col = svg.selectAll(".projectcol")
         .data(theData)
         .enter().append("g")
-        .attr("class", "col")
-        .attr("transform",function(d,i) {return "translate("+x_scale(i)+",100)"});
+        .attr("class", "projectcol")
+        .attr("transform",function(d,i) {return "translate("+x_scale(i)+",150)"});
                             
     col.append("text")
       .attr("x", 0)
-      .attr("y", 0)
+      .attr("y", 12)
+      .attr("font-size", 12)
       .attr("dy", "-.5em") 
       .attr("dx", ".5em")
       .attr("text-anchor", "start")
       .attr("fill","black")
-      .attr("transform","rotate(-45)")
-      .text(function(d, i) { return d.caption; });
+      .attr("transform", "rotate(-90)")
+      .attr("class", "projectText")
+      .attr("cursor","pointer")
+      .text(function (d, i) { return d.caption; })
+      .on("mouseenter", function(d,i) {highlightLine(i);})
+      .on("mouseleave", function (d, i) { unhighlightLine(i); })
+      .on("click", function (d, i) { showInfo(scope, d) });
+
+    col.append("line")
+        .attr("x1", 2)
+        .attr("y1", 12)
+        .attr("x2", 2)
+        .attr("y2", function (d) { return height - 2 * marginy })
+        .attr("class","columnline");
+        
             
     var cells = svg.selectAll(".cell")
         .data(theData)
@@ -326,8 +348,8 @@ function keywordLayout(svg, theData, scope)
               .attr("class","baz")
               .attr("x", function(d,i) {return x_scale(theCount)})
               .attr("y", function(d,i) {return y_scale(keywords.indexOf(d))})
-              .attr("width",5)
-              .attr("height",5)
+              .attr("width",4)
+              .attr("height",4)
               .style("fill","red")
 }
 /*      
@@ -340,3 +362,15 @@ function keywordLayout(svg, theData, scope)
 }
 
 
+function highlightLine(which) {
+    $(".columnline").eq(which).attr("class", "columnline highlighted");
+    $(".projectText").eq(which).attr("fill", "purple");
+    $(".projectText").eq(which).attr("font-size", "16");
+}
+
+function unhighlightLine(which) {
+    $(".columnline").eq(which).attr("class", "columnline");
+    $(".projectText").eq(which).attr("fill", "black");
+    $(".projectText").eq(which).attr("font-size", "12");
+
+}

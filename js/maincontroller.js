@@ -27,7 +27,7 @@
           $timeout(function(){
             resetPortfolio($scope.sortBy, $scope.ascending);
             $scope.recalculate();
-          }, 1);        
+          }, 1000);        
    });
     
 
@@ -90,6 +90,7 @@
                 sortBy: $scope.sortBy,
                 sortAscending: $scope.ascending       
             });
+            $portfolio.isotope();
         }
   //      $scope.$apply();    
     }
