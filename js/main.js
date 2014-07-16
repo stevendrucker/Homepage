@@ -366,6 +366,8 @@ function highlightLine(which) {
     $(".columnline").eq(which).attr("class", "columnline highlighted");
     $(".projectText").eq(which).attr("fill", "purple");
     $(".projectText").eq(which).attr("font-size", "16");
+
+
 }
 
 function unhighlightLine(which) {
