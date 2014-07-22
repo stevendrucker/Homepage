@@ -16,7 +16,7 @@ jQuery(function($) {
         },'json');
         return false;
     });
-
+/*
     //smooth scroll
     $('.navbar-nav > li:not(.special)').click(function(event) {
         event.preventDefault();
@@ -35,7 +35,7 @@ jQuery(function($) {
     $("a.preview").prettyPhoto({
         social_tools: false
     });
-
+    */
     //Isotope
     $(window).load(function(){
         $portfolio = $('.portfolio-items');
@@ -257,11 +257,13 @@ function keywordLayout(svg, theData, scope)
     var height = $('svg').height();
     var marginx = 150;
     var marginy = 150;
+    curData = theData;
     svg.append("g")
         .attr("transform", "translate(0, 0)");
               
     keywords = _.uniq(_.flatten(_.map(theData, function (d) { return d.tags["subject"] })));
-    
+    projects = _.map(theData, function (d) { return d.caption });
+
     x_scale = d3.scale.linear()
         .range([marginx, width - marginx])
         .domain([0, theData.length]);
@@ -292,7 +294,11 @@ function keywordLayout(svg, theData, scope)
       .attr("y", 0)
       .attr("dy", ".32em")
       .attr("text-anchor", "end")
-      .attr("fill","black")
+      .attr("fill", "black")
+      .attr("class", "keywordText")
+      .attr("cursor", "pointer")
+      .on("mouseenter", function (d, i) { highlightRow(i); highlightColNames(i)})
+      .on("mouseleave", function (d, i) { unhighlightRow(i); unhighlightColNames(i) })
       .text(function (d, i) { return d; });
 
     row.append("line")
@@ -302,6 +308,7 @@ function keywordLayout(svg, theData, scope)
     .attr("y2", 2)
     .attr("stroke", "black")
     .attr("stroke-width", .1)
+    .attr("class", "rowline");
       
     var col = svg.selectAll(".projectcol")
         .data(theData)
@@ -321,8 +328,8 @@ function keywordLayout(svg, theData, scope)
       .attr("class", "projectText")
       .attr("cursor","pointer")
       .text(function (d, i) { return d.caption; })
-      .on("mouseenter", function(d,i) {highlightLine(i);})
-      .on("mouseleave", function (d, i) { unhighlightLine(i); })
+      .on("mouseenter", function(d,i) {highlightLine(i);highlightRowNames(d.tags["subject"])})
+      .on("mouseleave", function (d, i) { unhighlightLine(i); unhighlightRowNames(d.tags["subject"]) })
       .on("click", function (d, i) { showInfo(scope, d) });
 
     col.append("line")
@@ -374,5 +381,47 @@ function unhighlightLine(which) {
     $(".columnline").eq(which).attr("class", "columnline");
     $(".projectText").eq(which).attr("fill", "black");
     $(".projectText").eq(which).attr("font-size", "12");
+}
 
+
+
+function highlightRow(which) {
+    $(".rowline").eq(which).attr("class", "rowline highlighted");
+    $(".keywordText").eq(which).attr("fill", "purple");
+    $(".keywordText").eq(which).attr("font-size", "16");
+
+
+}
+
+function unhighlightRow(which) {
+    $(".rowline").eq(which).attr("class", "rowline");
+    $(".keywordText").eq(which).attr("fill", "black");
+    $(".keywordText").eq(which).attr("font-size", "12");
+}
+
+function highlightRowNames(alist) {
+    _.each(alist, function (aKeyword) {
+        ind = keywords.indexOf(aKeyword);
+        highlightRow(ind);
+    });
+}
+
+function unhighlightRowNames(alist) {
+    _.each(alist,function (aKeyword) {
+        ind = keywords.indexOf(aKeyword);
+        unhighlightRow(ind);
+    });
+}
+
+
+function highlightColNames(i) {
+    theKeyword = keywords[i];
+    projlist = _.filter(curData, function (d) { if (d.tags["subject"].indexOf(theKeyword) > -1) return 1; else return 0 });
+    _.each(projlist, function(proj) {highlightLine(projects.indexOf(proj.caption))});
+}
+
+function unhighlightColNames(i) {
+    theKeyword = keywords[i];
+    projlist = _.filter(curData, function (d) { if (d.tags["subject"].indexOf(theKeyword) > -1) return 1; else return 0 });
+    _.each(projlist, function(proj) {unhighlightLine(projects.indexOf(proj.caption))});
 }
