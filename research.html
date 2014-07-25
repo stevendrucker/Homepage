@@ -53,7 +53,7 @@
    
     
     <section id="research">
-        <div id="content" ng-app="MyAngularApp" ng-controller="MainController">
+        <div id="content" ng-app="MyAngularApp" ng-controller="MainController" class="container-fluid">
             <div class="container-fluid" style="padding:5px 20px 10px 40px">
                 <div class="center">
                         <div class="row">
@@ -106,24 +106,29 @@
 
     <script type="text/ng-template" id="myModalContent.html">
         <div class="modalInfo">
-                <div class="modal-header">
+                <div class="modal-header center">
                     <h3 class="modal-title">{{selObj.caption}}</h3>
                 </div>
-                <img class="img-responsive" ng-src="images/{{selObj.img}}" alt=""> </img>
-                <a class="btn" ng-href="{{selObj.video}}">VIDEO</a>
-                <a class="btn" ng-href="{{selObj.pdf}}">PDF</a>        
+            <div class="center">
+                <img style="width:400px; height:300px" ng-src="images/{{selObj.img}}" alt=""> </img>
+            </div>
+            <div class="center">
+                <button type="button" class="btn btn-default"><a ng-href="{{selObj.video}}">VIDEO</a></button>
+                <button type="button" class="btn btn-default"><a ng-href="{{selObj.pdf}}">PDF</a></button>
+            </div>
             
                 <div class="modal-body">
-                        
-                   <h5> Reference: {{selObj.reference}} 
-                   </h5>
-                   <h6> Abstract: {{selObj.pabstract}}</h6>
+
+                    <h5>
+                        Reference: {{selObj.reference}}
+                    </h5>
+                    <h6> Abstract: {{selObj.pabstract}}</h6>
                 </div>
-                
+
                 <div class="modal-footer">
                     <button class="btn btn-primary" ng-click="ok()">OK</button>
                 </div>
-        </div>
+</div>
     </script>
 
     <script type="text/ng-template" id="tileLayout.html">       
