@@ -267,7 +267,7 @@ function keywordLayout(svg, theData, scope)
     projects = _.map(theData, function (d) { return d.caption });
 
     x_scale = d3.scale.linear()
-        .range([0, width])
+        .range([marginx, width - marginx])        
         .domain([0, theData.length]);
    
 
@@ -283,7 +283,36 @@ function keywordLayout(svg, theData, scope)
     var y = d3.scale.ordinal().rangeBands([0, height]);
     y.domain(keywords);
   
+   
+    var yaxis_title = svg.selectAll(".yTitle")
+        .data(["Subject"])
+        .enter()
+        .append("g")
+        .attr("transform", "translate(15,215)")
+        .append("text")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("font-size", 16)
+        .attr("font-weight","bold")
+        .text("Subject")
+        .attr("fill", "black")
+        .attr("transform", "rotate(-90)")
+        .attr("class", "yTitle")
       
+    var xaxis_title = svg.selectAll(".xTitle")
+        .data(["Project"])
+        .enter()
+        .append("g")
+        .attr("transform", "translate(145,15)")
+        .append("text")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("font-size", 16)
+        .attr("font-weight", "bold")
+        .text("Project")
+        .attr("fill", "black")        
+        .attr("class", "xTitle")
+
       
     var row = svg.selectAll(".row")
       .data(keywords)

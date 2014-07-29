@@ -12,7 +12,7 @@
              "img": "researchImages/leadlag.png",
              "caption": "Topic-Lead-Lag",
              "primary": "Visualization",
-             "reference": "Liu, S., Chen, Y., Wei, H., Yang, J., Zhou, K., & Drucker, S. M. Exploring Topical Lead-Lag across Corpora.",
+             "reference": "Liu, S., Chen, Y., Wei, H., Yang, J., Zhou, K., & Drucker, S. M. Exploring Topical Lead-Lag across Corpora. IEEE TKDE",
              "pdf": "http://research.microsoft.com/en-us/um/people/shliu/TextPioneerTKDE.pdf",
              "video": "http://research.microsoft.com/en-us/um/people/shliu/TextPioneerTKDE.pdf",
              "pabstract": "Identifying which text corpus leads in the context of a topic presents a great challenge of considerable interest to researchers. Recent research into lead-lag analysis has mainly focused on estimating the overall leads and lags between two corpora. However, real-world applications have a dire need to understand lead-lag patterns both globally and locally. In this paper, we introduce TextPioneer, an interactive visual analytics tool for investigating lead-lag across corpora from the global level to the local level. In particular, we extend an existing lead-lag analysis approach to derive two-level results. To convey multiple perspectives of the results, we have designed two visualizations, a novel hybrid tree visualization that couples a radial space-filling tree with a node-link diagram and a twisted-ladder-like visualization. We have applied our method to several corpora and the evaluation shows promise, especially in support of text comparison at different levels of detail.",
