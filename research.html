@@ -113,8 +113,8 @@
                 <img style="width:400px; height:300px" ng-src="images/{{selObj.img}}" alt=""> </img>
             </div>
             <div class="center">
-                <button type="button" class="btn btn-default"><a ng-href="{{selObj.video}}">VIDEO</a></button>
-                <button type="button" class="btn btn-default"><a ng-href="{{selObj.pdf}}">PDF</a></button>
+                <a class="btn btn-primary" ng-href="{{selObj.video}}">VIDEO</a>
+                <a class="btn btn-primary" ng-href="{{selObj.pdf}}">PDF</a>
             </div>
             
                 <div class="modal-body">
@@ -154,18 +154,22 @@
     <script type="text/ng-template" id="abstractLayout.html">
         
         <ul class="portfolio-items col-1">
-            <li class="portfolio-item" ng-repeat="obj in research" ng-attr-data-caption="{{obj.caption}}" ng-attr-data-primary="{{obj.primary}}"  ng-attr-data-year="{{obj.year}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-year="{{obj.tags['year'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
-            <div class="row" style="border:solid 1px">
-                <div class="col-md-2">
-                    <div ng-mouseenter="addselect(obj)" ng-mouseleave="removeselect(obj)" ng-click="showInfo(obj)">
-                        <img class="portfolio-image" ng-src="images/{{obj.img}}" alt="" style="padding: 10px">                                                    
-                    </div>                    
-                </div>
-                <div class="col-md-10">                        
+            <li class="portfolio-item" ng-repeat="obj in research" ng-attr-data-caption="{{obj.caption}}" ng-attr-data-primary="{{obj.primary}}" ng-attr-data-year="{{obj.year}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-year="{{obj.tags['year'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
+                <div class="row" style="border:solid 1px">
+                    <div class="col-md-2">
+                        <div ng-mouseenter="addselect(obj)" ng-mouseleave="removeselect(obj)" ng-click="showInfo(obj)">
+                            <img class="portfolio-image" ng-src="images/{{obj.img}}" alt="" style="padding: 10px">
+                        </div>
+                        <br />
+                        <a class="btn btn-primary" ng-href="{{obj.video}}">VIDEO</a>
+                        <a class="btn btn-primary" ng-href="{{obj.pdf}}">PDF</a>
+
+                    </div>
+                    <div class="col-md-10">
                         <h3>{{obj.caption}}</h3>
                         <h6>{{obj.reference}}</h6>
                         {{obj.pabstract}}
-                </div>
+                    </div>
 
             </li><!--/.portfolio-item-->
         </ul>
