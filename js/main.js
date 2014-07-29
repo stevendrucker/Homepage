@@ -115,7 +115,7 @@ function timelineLayout(svg, theData, scope) {
     var length = theData.length;
     var primarylength = primaryList.length;
     x_scale = d3.scale.linear()
-        .range([marginx, width - marginx])
+        .range([0, width])
         .domain([x_extent[0] - 2, Math.floor(x_extent[1]) + 2]);
 
     y_scale = d3.scale.linear()
@@ -146,12 +146,12 @@ function timelineLayout(svg, theData, scope) {
         .data(primaryList)
         .enter()
         .append('rect')
-        .attr('x', marginx)
+        .attr('x', 0)
         .attr('y', function (d, i) {
             var baseCount = runsum[i];
             return (y_scale(baseCount));
         })
-        .attr('width', width - marginx)
+        .attr('width', width)
         .attr('height', function (d, i) {
             var baseCount = counts[i];
             //            return (10);
@@ -176,7 +176,8 @@ function timelineLayout(svg, theData, scope) {
     svg
       .append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + (height - marginy) + ")")
+              .attr("transform", "translate(0," + (height - marginy) + ")")
+//      .attr("transform", "translate("+marginx+"," + (height - marginy) + ")")
       .call(x_axis);
 
     d3.select('.x.axis')
@@ -209,7 +210,8 @@ function timelineLayout(svg, theData, scope) {
           .attr('y', function (d, i) { return y_scale(baseCount + i) - 2 })
           .text(function (d, i) { return d.caption })
           .attr('data', function (d) { return d.primary })
-          .attr('class','paperClass')
+          .attr('class', 'paperClass')
+          .attr("cursor","pointer")
           .on("click", function(d,i) {showInfo(scope,d)});
     
         svg.selectAll('.' + groupName)
@@ -230,7 +232,7 @@ function timelineLayout(svg, theData, scope) {
         .enter()
         .append('text')
         .attr('y', function (d) { return(y_scale(baseCount+ sortedGroup.length/2)+5)})
-        .attr('x', 60)    
+        .attr('x', 0)    
         .attr('class', 'timeTitleClass')
         .text(function (d, i) { return (groupName) });
     
@@ -265,7 +267,7 @@ function keywordLayout(svg, theData, scope)
     projects = _.map(theData, function (d) { return d.caption });
 
     x_scale = d3.scale.linear()
-        .range([marginx, width - marginx])
+        .range([0, width])
         .domain([0, theData.length]);
    
 
