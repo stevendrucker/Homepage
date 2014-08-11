@@ -456,3 +456,10 @@ function unhighlightColNames(i) {
     projlist = _.filter(curData, function (d) { if (d.tags["subject"].indexOf(theKeyword) > -1) return 1; else return 0 });
     _.each(projlist, function(proj) {unhighlightLine(projects.indexOf(proj.caption))});
 }
+
+
+
+
+function patentLayout(svg, theData, scope) {
+
+}

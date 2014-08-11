@@ -18,7 +18,7 @@
     $scope.radioModel = 'Icons';
     $scope.ascending = false;
     $scope.sortBy = "year";
-    
+    $scope.patents = patents;
 
     // since changing the radiomodel causes a change in the layout to the portfolio items
     // we need to reset isotope to the new list

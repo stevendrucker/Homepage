@@ -244,7 +244,7 @@
         "tags":{ "subject":["UI", "Information","Visualization","Design"],
             "publication":["InternalReport"],
             "year":["2011"],
-            "collaborators":["Fisher","Drucker","Fernandez","Chen"]},
+            "collaborators":["Fisher","Fernandez","Chen"]},
         "img":"researchImages/visavis.png",
         "caption": "Vis-a-vis",
         "primary": "Visualization",
@@ -947,7 +947,7 @@
                                           "collaborators": ["Siegel", "Garabieta"]
                                       },
                                       "img": "researchImages/perfanalysis.png",
-                                      "caption": "Task Level Learning",
+                                      "caption": "Tactile Sensor",
                                       "primary": "Robotics",
                                       "reference": "Siegel, D.; Drucker, S.; Garabieta, I, Performance analysis of a tactile sensor, Robotics and Automation. Proceedings. 1987 IEEE International Conference on , vol.4, no., pp.1493,1499, March 1987",
                                       "pdf": "http://research.microsoft.com/copyright/accept.asp?path=/~sdrucker/papers/tactilesensor,pdf&pub=IEEE",

@@ -108,8 +108,6 @@ app.directive('ghKeywordvisualization', function () {
         if (!newVal) {
           return;
         }
-
-        // Based on: http://mbostock.github.com/d3/ex/stack.html
         var n = newVal.length;
         svg = d3.select('svg');
         
@@ -121,3 +119,36 @@ app.directive('ghKeywordvisualization', function () {
 });
 
 
+app.directive('ghPatentvisualization', function () {
+
+    // constants
+    var margin = 20;
+
+    return {
+        restrict: 'E',
+        scope: false,
+        link: function (scope, element, attrs) {
+
+            // set up initial svg object
+            var vis = d3.select(element[0])
+              .append("svg");
+
+            scope.$watch('filteredResearch', function (newVal, oldVal) {
+
+                // clear the elements inside of the directive
+                vis.selectAll('*').remove();
+
+                // if 'val' is undefined, exit
+                if (!newVal) {
+                    return;
+                }
+
+                var n = newVal.length;
+                svg = d3.select('svg');
+
+                patentLayout(svg, newVal, scope);
+
+            });
+        }
+    }
+});
