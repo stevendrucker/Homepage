@@ -8,7 +8,8 @@
     
     $scope.primary = _.uniq(_.map(myData.data, function (d) { return d.primary }))
     $scope.filters = {};
-    $scope.tags = ["publication", "year", "collaborators", "subject"];
+    //$scope.tags = ["publication", "year", "collaborators", "subject"];
+    $scope.tags = ["subject", "year", "publication", "collaborators"];
     $scope.sortKeys = ["caption","year"];
     globaltags = $scope.tags;
     _.each($scope.tags, function(t) {$scope.filters[t] = []});
@@ -52,7 +53,7 @@
 
     _.unique(_.map(selector,function(d) {return d.attributes["data-publication"].value}))
     */
-    // a = _.flatten(_.map(selector,function(d) {return d.attributes["data-collaborators"].value.split(" ")}))
+    // a = _.flatten(_.map(selector,function(d) {return d.attributes["data-collaborators"].value.split(";")}))
     
     
     $scope.setFilter = function (attribute, value)
@@ -72,19 +73,25 @@
     $scope.recalculate = function () {
     //    alert("recalculate");
         if ($scope.mode == "research") {
-            theTarget = $scope.research;
+            $scope.theTarget = $scope.research;
             //code
         } else {
-            theTarget = $scope.patents;
+            $scope.theTarget = $scope.patents;
         }
         _.each($scope.tags, function (t) {
-            basicList = _.filter(theTarget, function(d) {return $scope.passFilter(d, t)});              
+            basicList = _.filter($scope.theTarget, function(d) {return $scope.passFilter(d, t)});              
             valueList = _.groupBy(_.flatten(_.map(basicList, function (d) { return d.tags[t] })));
             $scope.values[t] = _.map(valueList, function (d) { return d[0] });
             $scope.valueCounts[t] = _.map(valueList, function (d) { return d.length });
         });
         $scope.filteredResearch = _.filter($scope.research, function(d) {return $scope.passFilter(d,"*")});
-        $scope.filteredPatents = _.filter($scope.patents, function(d) {return $scope.passFilter(d,"*")});
+        $scope.filteredPatents = _.filter($scope.patents, function (d) { return $scope.passFilter(d, "*") });
+        if ($scope.mode == "research") {
+            $scope.filteredTarget = $scope.filteredResearch;
+            //code
+        } else {
+            $scope.filteredTarget = $scope.filteredPatents;
+        }
         if (typeof($portfolio) != 'undefined') {
             $portfolio.isotope({
                 itemSelector : 'li',
@@ -158,7 +165,7 @@
         pass = true;
         _.each($scope.tags, function(t) {        
             if ($scope.filters[t].length > 0) {
-                l0 = obj.attributes["data-"+t].value.split(" ");
+                l0 = obj.attributes["data-"+t].value.split(";");
                 l1 = _.intersection(l0, $scope.filters[t]).length;
                 if (l1 == 0 ) {
                     pass = false;
