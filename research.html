@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
     <script src="js/data.js" type="text/javascript"></script>
-    <script src="js/patents.js" type="text/javascript"></script>
+    <script src="js/newpatents.js" type="text/javascript"></script>
     <script src="js/angular.min.js" type="text/javascript"></script>
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/underscore-min.js" type="text/javascript"></script>
@@ -59,12 +59,12 @@
                 <div class="center">
                     <div class="row">
                         <div class="btn-group col-md-6">
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Icons'">Icons</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Details'">Details</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Publications'">Publications</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Timeline'">Timeline</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Keywords'">Keywords</label>
-                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Patents'">Patents</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Icons'" ng-click="mode='research';">Icons</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Details'" ng-click="mode='research';">Details</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Publications'" ng-click="mode='research';">Publications</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Timeline'" ng-click="mode='research';">Timeline</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Keywords'" ng-click="mode='research';">Keywords</label>
+                            <label class="btn btn-primary" ng-model="radioModel" btn-radio="'Patents'" ng-click="mode='patents';">Patents</label>
 
                         </div>
                         <div class="btn-group" dropdown is-open="status.isopen">
@@ -203,16 +203,16 @@
 
                 <script type="text/ng-template" id="patentLayout.html">
                     <ul class="portfolio-items col-1">
-                        <li class="portfolio-item" ng-repeat="obj in patents">
+                        <li class="portfolio-item" ng-repeat="obj in patents | orderBy: 'myDate'" ng-attr-data-caption="{{obj.caption}}" ng-attr-data-primary="{{obj.tags.subject[0]}}" ng-attr-data-year="{{obj.tags.year[0]}}" ng-attr-data-subject="{{obj.tags['subject'].join(' ')}}" ng-attr-data-publication="{{obj.tags['publication'].join(' ')}}" ng-attr-data-collaborators="{{obj.tags['collaborators'].join(' ')}}">
                             <div class="row" style="border:solid 1px">
                                 <div class="col-md-2">
                                     <h4>{{obj["Final Application Title"]}}</h4>
                                 </div>
                                 <div class="col-md-1">
-                                    <h4>{{obj["Date Filed"]}}</h4>
+                                    <h4>{{obj["DateFiled"]}}</h4>
                                 </div>
                                 <div class="col-md-9">
-                                    <h5>{{obj["Executive Summary (when available)"]}}</h5>
+                                    <p>{{obj["Executive Summary (when available)"]}}</p>
                                 </div>
                             </div>
                         </li><!--/.portfolio-item-->

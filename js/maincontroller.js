@@ -18,8 +18,9 @@
     $scope.radioModel = 'Icons';
     $scope.ascending = false;
     $scope.sortBy = "year";
-    $scope.patents = patents;
-
+    $scope.patents = _.map(patents, function(d) {d.myDate = new Date(d["DateFiled"]); return(d)});
+    $scope.filteredPatents = $scope.patents;
+    $scope.mode = "research";                                               
     // since changing the radiomodel causes a change in the layout to the portfolio items
     // we need to reset isotope to the new list
     // but we need to wait until after it's done a layout hence the timeout
@@ -70,14 +71,20 @@
     
     $scope.recalculate = function () {
     //    alert("recalculate");
-    
+        if ($scope.mode == "research") {
+            theTarget = $scope.research;
+            //code
+        } else {
+            theTarget = $scope.patents;
+        }
         _.each($scope.tags, function (t) {
-            basicList = _.filter($scope.research, function(d) {return $scope.passFilter(d, t)});              
+            basicList = _.filter(theTarget, function(d) {return $scope.passFilter(d, t)});              
             valueList = _.groupBy(_.flatten(_.map(basicList, function (d) { return d.tags[t] })));
             $scope.values[t] = _.map(valueList, function (d) { return d[0] });
             $scope.valueCounts[t] = _.map(valueList, function (d) { return d.length });
         });
         $scope.filteredResearch = _.filter($scope.research, function(d) {return $scope.passFilter(d,"*")});
+        $scope.filteredPatents = _.filter($scope.patents, function(d) {return $scope.passFilter(d,"*")});
         if (typeof($portfolio) != 'undefined') {
             $portfolio.isotope({
                 itemSelector : 'li',
@@ -98,8 +105,11 @@
     $scope.sortPortfolio = function(key, dir) {
         resetPortfolio(key, dir);
         $scope.filteredResearch = _.sortBy($scope.filteredResearch, key);
+        $scope.filteredPatents = _.sortBy($scope.filteredPatents, key);
         if (dir) {
             $scope.filteredResearch.reverse();
+            $scope.filteredPatents.reverse();
+
         }
         
     }
