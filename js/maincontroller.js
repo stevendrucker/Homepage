@@ -8,11 +8,13 @@
     
     $scope.primary = _.uniq(_.map(myData.data, function (d) { return d.primary }))
     $scope.filters = {};
+    $scope.filterSortDir = {};
+    $scope.filterSort = {};
     //$scope.tags = ["publication", "year", "collaborators", "subject"];
     $scope.tags = ["subject", "year", "publication", "collaborators"];
     $scope.sortKeys = ["caption","year"];
     globaltags = $scope.tags;
-    _.each($scope.tags, function(t) {$scope.filters[t] = []});
+    _.each($scope.tags, function(t) {$scope.filters[t] = []; $scope.filterSortDir[t]=true;$scope.filterSort[t]='count'});
     $scope.values = {};
     $scope.valueCounts = {};
     $scope.countList = {};
