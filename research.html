@@ -242,18 +242,27 @@
                                         </h4>
                                     </div>
                                     <div id="acc{{tag}}" class="panel-collapse collapse in">
-                                        <div class="panel-body filter-panel">
+                                        <div class="panel-body filter-panel" style="padding-top:0">
                                             <table class="table table-hover">
                                                 <tbody>
-                                                    <tr ng-repeat="obj in values[tag]" ng-class="selectedIsOn(obj,tag)">
-                                                        <td width="10px">
-                                                            <span class="glyphicon glyphicon-ok" ng-show="filterIsOn(obj,tag)"></span>
-
+                                                    <!--  <span class="glyphicon glyphicon-sort"> -->
+                                                <thead>
+                                                    <tr style="height:10px">
+                                                        <td width="10px" style="height:10px;padding-top:2; padding-bottom:5px;margin:0;vertical-align:middle"></td>
+                                                        <td width="95px" style="height:10px;padding-top:2; padding-bottom:5px;margin:0;text-align:left;vertical-align:middle"><span class="glyphicon glyphicon-sort" style="color:#999"></span></td>
+                                                        <td width="20px" style="height:10px;padding-top:2; padding-bottom:5px;margin:0;text-align:left;vertical-align:middle"><span class="glyphicon glyphicon-sort" style="color:#999"></span></td>
+                                                    </tr>
+                                                </thead>
+                                                    <tr ng-repeat="obj in countList[tag] | orderBy:'-count'" ng-class="selectedIsOn(obj,tag)">
+                                                        <td width="10px">                                                            
+                                                            <span class="glyphicon glyphicon-ok" ng-show="filterIsOn(obj.name,tag)"></span>
                                                         <td width="95px">
-                                                            <portfilter ng-attr-data-filter="{{tag}}" />
+                                                            <portfilter ng-attr-data-filter="{{tag}}" /> -->
+<!---->                                                            <portfilter ng-attr-data-filter="{{tag}}" /> -->
                                                         </td>
                                                         <td width="20px">
-                                                            {{valueCounts[tag][$index]}}
+                                                            {{obj.count}}
+<!--                                                            {{valueCounts[tag][$index]}} -->
                                                         </td>
                                                     </tr>
                                                 </tbody>

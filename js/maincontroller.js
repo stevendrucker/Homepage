@@ -15,6 +15,7 @@
     _.each($scope.tags, function(t) {$scope.filters[t] = []});
     $scope.values = {};
     $scope.valueCounts = {};
+    $scope.countList = {};
     myValues = {};
     $scope.radioModel = 'Icons';
     $scope.ascending = false;
@@ -78,11 +79,14 @@
         } else {
             $scope.theTarget = $scope.patents;
         }
+        // need to clean this up as we don't need ALL of these intermediate values
         _.each($scope.tags, function (t) {
             basicList = _.filter($scope.theTarget, function(d) {return $scope.passFilter(d, t)});              
             valueList = _.groupBy(_.flatten(_.map(basicList, function (d) { return d.tags[t] })));
             $scope.values[t] = _.map(valueList, function (d) { return d[0] });
             $scope.valueCounts[t] = _.map(valueList, function (d) { return d.length });
+            temp = _.countBy(_.flatten(_.map(basicList, function (d) { return d.tags[t] })));
+            $scope.countList[t]= _.map(temp, function (val, key) { return ({ "name": key, "count": val }) })
         });
         $scope.filteredResearch = _.filter($scope.research, function(d) {return $scope.passFilter(d,"*")});
         $scope.filteredPatents = _.filter($scope.patents, function (d) { return $scope.passFilter(d, "*") });

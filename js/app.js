@@ -7,15 +7,15 @@ app.directive('portfilter', function () {
     return {
         restrict: 'AE',
         replace: 'true',
-        template: '<p>{{obj}}</p>',
+        template: '<p>{{obj.name}}</p>',
         link: function (scope, elem, attrs) {
-            //console.debug("portfilter " + scope.obj + " filter " + elem.attr("data-filter"));
+            //console.debug("portfilter " + scope.obj.name + " filter " + elem.attr("data-filter"));
             elem.bind('click', function () {
-                // selector = '$("li[data-primary=\'' + scope.obj + '\']")';
+                // selector = '$("li[data-primary=\'' + scope.obj.name + '\']")';
                 // $portfolio.isotope({ filter: selector });
                 
-                //filterString = "li[data-" + elem.attr("data-filter") + '="' + scope.obj + '"]';
-                scope.setFilter(elem.attr("data-filter"), scope.obj);
+                //filterString = "li[data-" + elem.attr("data-filter") + '="' + scope.obj.name + '"]';
+                scope.setFilter(elem.attr("data-filter"), scope.obj.name);
                 
                // selector = $(filterString);
                // $portfolio.isotope({ filter: selector });
@@ -24,22 +24,22 @@ app.directive('portfilter', function () {
             });
            
             elem.on('mouseenter', function () {                
-                filterString = "li[data-" + elem.attr("data-filter") + '*="' + scope.obj + '"]';
+                filterString = "li[data-" + elem.attr("data-filter") + '*="' + scope.obj.name + '"]';
                 selector = $(filterString);
                 selector.addClass("tint");
                 
-                filterString = "text[data-" + elem.attr("data-filter") + '*="' + scope.obj + '"]';
+                filterString = "text[data-" + elem.attr("data-filter") + '*="' + scope.obj.name + '"]';
                 selector = $(filterString);
                 selector.attr("fill", "red");
                 
             });
             
             elem.on('mouseleave', function () {
-                filterString = "li[data-" + elem.attr("data-filter") + '*="' + scope.obj + '"]';
+                filterString = "li[data-" + elem.attr("data-filter") + '*="' + scope.obj.name + '"]';
                 selector = $(filterString);
                 selector.removeClass("tint");
                 
-                filterString = "text[data-" + elem.attr("data-filter") + '*="' + scope.obj + '"]';
+                filterString = "text[data-" + elem.attr("data-filter") + '*="' + scope.obj.name + '"]';
                 selector = $(filterString);
                 selector.attr("fill", "black");
             });
