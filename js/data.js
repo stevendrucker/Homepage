@@ -3,7 +3,7 @@
   
 {
              "tags": {
-                 "subject": ["Information", "Visualization"],
+                 "subject": ["Information", "Visualization","Machine Learning"],
                 "publication": ["TKDE"],
                 "year": ["2014"],
                 "collaborators": ["Liu", "Chen","Wei","Yang","Zhou"]
@@ -27,7 +27,7 @@
              },
              "img": "researchImages/demowiz.png",
              "caption": "Demowiz",
-             "primary": "Presentations",
+             "primary": "Presentation",
              "reference": "Chi, Pei-Yu, Bongshin Lee, and Steven M. Drucker. DemoWiz: re-performing software demonstrations for a live presentation. Proceedings of the 32nd annual ACM conference on Human factors in computing systems. ACM, 2014.",
              "pdf": "http://research.microsoft.com/en-us/um/people/sdrucker/papers/demowiz.pdf",
              "video": "http://research.microsoft.com/en-us/people/sdrucker/video/demowiz.mp4",
@@ -143,7 +143,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Graphics","Pictures","Photos"],
+        "tags":{ "subject":["UI", "Graphics","Photos"],
             "publication":["UIST"],
             "year":["2012"],
             "collaborators":["Joshi","Metha","Stollnitz","Cohen","Hoppe","Uyttendaele"]},
@@ -157,7 +157,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["Graphics","Pictures"],
+        "tags":{ "subject":["Graphics","Photos"],
             "publication":["SIGGRAPHAsia"],
             "year":["2012"],
             "collaborators":["Kopf","Kienzle","Kang"]},
@@ -171,7 +171,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["Graphics","Pictures"],
+        "tags":{ "subject":["Graphics","Photos"],
             "publication":["SIGGRAPHAsia"],
             "year":["2012"],
             "collaborators":["Guenter","Finch","Tan","Snyder"]},
@@ -294,7 +294,7 @@
     "id":0
 },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Machine Learning"],
+        "tags":{ "subject":["UI", "Information","Visualization","Machine Learning","Programming"],
             "publication":["UIST"],
             "year":["2010"],
             "collaborators":["Patel","Bancroft","Fogarty","Ko", "Landay"]},
@@ -308,7 +308,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Design"],
+        "tags":{ "subject":["UI", "Information","Visualization","Design","Search"],
             "publication":["SIGCHI"],
             "year":["2009"],
             "collaborators":["Teevan","Cutrell","Fisher","Ramos", "Andre", "Hu"]},
@@ -434,7 +434,7 @@
             "id":0
         },
         {      
-            "tags":{ "subject":["Visualization", "UI", "Presentations"],                                            
+            "tags":{ "subject":["Visualization", "UI", "Presentation","Temporal"],                                            
                 "publication":["UIST"],
                 "year":["2006"],
                 "collaborators":["Petschnigg", "Agrawala"]},
@@ -525,13 +525,13 @@
                                     "pdf":"http://research.microsoft.com/~sdrucker/papers/photomontage.pdf",
                                     "id":6
                                 },
-                                {              "tags":{ "subject":["Animation", "UI", "Presentations"],
+                                {              "tags":{ "subject":["Animation", "UI", "Presentation"],
                                     "publication":["DUX"],
                                     "year":["2005"],
                                     "collaborators":["Dontcheva","Cohen"]},
                                     "img":"researchImages/v4v.jpg",
                                     "caption": "V4V",
-                                    "primary": "Presentations",
+                                    "primary": "Presentation",
                                     "reference":"Dontcheva M., Drucker S., Cohen M., v4v: a View for the Viewer, DUX 2005",
                                     "video":"http://research.microsoft.com/~sdrucker/Video/v4v.avi",
                                     "pabstract":"We present a View for the Viewer (v4v), a slide viewer that focuses on the needs of the viewer of a presentation instead of the presenter. Our design centers on representing the deck of slides as a stack embedded in a 3-D world. With only single button clicks, the viewer can quickly and easily navigate the deck of slides. We provide four types of annotation techniques and have designed a synchronization mechanism that makes it easy for the viewer to move in and out of sync with the presenter. We also supply alarms as a method for viewer notification. We evaluate our approach with a preliminary user study resulting in positive feedback about our design plus suggestions for improvements and extensions.",
@@ -564,7 +564,7 @@
                                     "pabstract":"The Photo-triage application is meant to be an essential part of the digital photography lifestyle. It can fit as a component wherever photo management is done (shell, picture-it, media-center, etc.). The central idea is to facilitate rapid, convenient categorization of one's personal photos into at least the following categories: hidden/private, majority, highlights, best and/or representative. See figure 1. This application is meant to fill an empty niche in the usage of digital photos: that is, there's no easy way add metadata to photos to mark them for printing, for sharing, or for slideshows without creating separate versions of the photos and copying into separate folders. We propose a sorting metaphor that will add implicit metadata when one first goes through the photos. ",
                                     "id":9
                                 },
-                                {              "tags":{ "subject":["UI", "Information","Visualization"],
+                                {              "tags":{ "subject":["UI", "Information","Visualization","Movies"],
                                     "publication": ["InternalReport"],
                                     "year":["2003"],
                                     "collaborators":["Roseway","De Mar","Wong"]},
@@ -643,7 +643,7 @@
                                 },
                                 {
                                     "tags": {
-                                        "subject": ["UI", "Media"],
+                                        "subject": ["UI", "Media","Search","Information"],
                                         "publication": ["Multimedia"],
                                         "year": ["2002"],
                                         "collaborators": ["Gemmell", "Bell","Lueder", "Wong"]
@@ -805,7 +805,7 @@
                                     "id":26
                                 },
                                 {              "tags":{ "subject":["Graphics", "Animation", "Camera","Thesis"],
-                                    "publication":["Thesis"],
+                                    "publication":["Camera"],
                                     "year":["1994"],
                                     "collaborators":["Individual"]},
                                     "img":"researchImages/conversesm.gif",
@@ -954,7 +954,7 @@
                                       "pabstract": "This paper discusses the design of a contact sensor for use with the Utah-MIT dexterous hand [Jacobsen, et al. 1984]. The sensor utilizes an 8x8 array of capacitive cells. This paper extends the work presented in Siegel and Garabiet [1986], and the ealier work of Boie [1984]; a more detailed design analysis, modifications to the construction process, and better performance results are shown.",
                                       "id": 33
                                   },
-                                {              "tags":{ "subject":["Hyptertext", "UI"],
+                                {              "tags":{ "subject":["Hyptertext", "UI","Information"],
                                     "publication":["IEEE"],
                                     "year":["1988"],
                                     "collaborators":["Yankelovich","Haan", "Meyrowitz"]},
@@ -966,7 +966,7 @@
                                     "pabstract":"none",
                                     "id":34
                                 },
-                                {              "tags":{ "subject":["Hyptertext", "UI"],
+                                {              "tags":{ "subject":["Hyptertext", "UI","Information"],
                                     "publication":["ICSS"],
                                     "year":["1988"],
                                     "collaborators":["Yankelovich", "Haan"]},

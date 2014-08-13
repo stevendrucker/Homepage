@@ -328,6 +328,7 @@ function keywordLayout(svg, theData, scope)
       .attr("fill", "black")
       .attr("class", "keywordText")
       .attr("cursor", "pointer")
+      .attr("font-size",12)
       .on("mouseenter", function (d, i) { highlightRow(i); highlightColNames(i)})
       .on("mouseleave", function (d, i) { unhighlightRow(i); unhighlightColNames(i) })
       .text(function (d, i) { return d; });
@@ -403,7 +404,7 @@ function keywordLayout(svg, theData, scope)
 function highlightLine(which) {
     $(".columnline").eq(which).attr("class", "columnline highlighted");
     $(".projectText").eq(which).attr("fill", "purple");
-    $(".projectText").eq(which).attr("font-size", "16");
+    $(".projectText").eq(which).attr("font-size", "14");
 
 
 }
@@ -419,7 +420,7 @@ function unhighlightLine(which) {
 function highlightRow(which) {
     $(".rowline").eq(which).attr("class", "rowline highlighted");
     $(".keywordText").eq(which).attr("fill", "purple");
-    $(".keywordText").eq(which).attr("font-size", "16");
+    $(".keywordText").eq(which).attr("font-size", "14");
 
 
 }
