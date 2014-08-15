@@ -1,6 +1,6 @@
 ﻿var app = angular.module('MyAngularApp', ['ui.bootstrap']);
 
-var primaryList = ["Hypertext", "Robotics", "Graphics", "Camera", "Social", "UI-Information", "Media", "Photos", "Presentations", "Machine Learning", "Visualization"];
+var primaryList = ["Hypertext", "Robotics", "Graphics", "Camera", "Social", "UI-Information", "Media", "Photos", "Presentation", "Machine Learning", "Visualization"];
 
 app.directive('portfilter', function () {
 

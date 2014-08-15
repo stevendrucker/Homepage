@@ -208,6 +208,8 @@ function timelineLayout(svg, theData, scope) {
           .append('text')
           .attr('x', function (d, i) { return x_scale(d.tags.year) + 5 })
           .attr('y', function (d, i) { return y_scale(baseCount + i) - 2 })
+          .attr('font-size', 11)
+          .attr('font-weight', "bold")
           .text(function (d, i) { return d.caption })
           .attr('data', function (d) { return d.primary })
           .attr('class', 'paperClass')
@@ -264,6 +266,9 @@ function keywordLayout(svg, theData, scope)
         .attr("transform", "translate(0, 0)");
               
     keywords = _.uniq(_.flatten(_.map(theData, function (d) { return d.tags["subject"] })));
+    // add primaries as well
+    primkeyords = _.uniq(_.flatten(_.map(theData, function (d) { return [d.primary] })));
+    keywords = _.union(keywords, primkeyords);
     projects = _.map(theData, function (d) { return d.caption });
 
     x_scale = d3.scale.linear()
