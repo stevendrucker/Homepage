@@ -380,16 +380,29 @@ function keywordLayout(svg, theData, scope)
         .each(myCell)
         
     function myCell(someData, theCount) {
+        var cellp = d3.select(this).selectAll(".bazp")
+            .data([someData["primary"]])
+            .enter()
+              .append("ellipse")
+              .attr("class","bazp")
+              .attr("cx", function(d,i) {return x_scale(theCount)+2})
+              .attr("cy", function(d,i) {return y_scale(keywords.indexOf(d))+1})
+              .attr("primary",function(d,i){return d})
+              .attr("rx",3)
+              .attr("ry",3)
+              .style("fill","red")
+              
         var cell = d3.select(this).selectAll(".baz")
             .data(someData.tags["subject"])
             .enter()
-              .append("rect")
+              .append("ellipse")
               .attr("class","baz")
-              .attr("x", function(d,i) {return x_scale(theCount)})
-              .attr("y", function(d,i) {return y_scale(keywords.indexOf(d))})
-              .attr("width",4)
-              .attr("height",4)
+              .attr("cx", function(d,i) {return x_scale(theCount)+2})
+              .attr("cy", function(d,i) {return y_scale(keywords.indexOf(d))+1})
+              .attr("rx",2)
+              .attr("ry",2)
               .style("fill","red")
+              
 }
 /*      
     svg

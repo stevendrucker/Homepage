@@ -3,7 +3,7 @@
   
 {
              "tags": {
-                 "subject": ["Information", "Visualization","Machine Learning"],
+                 "subject": ["UI-Information", "Visualization","Machine Learning"],
                 "publication": ["TKDE"],
                 "year": ["2014"],
                 "collaborators": ["Liu", "Chen","Wei","Yang","Zhou"]
@@ -20,7 +20,7 @@
 },
          {
              "tags": {
-                 "subject": ["UI", "Presentation"],
+                 "subject": ["UI-Information", "Presentation"],
                  "publication": ["SIGCHI"],
                  "year": ["2014"],
                  "collaborators": ["Chi", "Lee"]
@@ -36,7 +36,7 @@
          },
          {
              "tags": {
-                 "subject": ["Visualization", "Information", "Design"],
+                 "subject": ["Visualization", "UI-Information", "Design"],
                  "publication": ["AVI"],
                  "year": ["2013"],
                  "collaborators": ["Bigelow", "Fisher","Meyer"]
@@ -52,7 +52,7 @@
          },
          {
              "tags": {
-                 "subject": ["UI"],
+                 "subject": ["UI-Information"],
                  "publication": ["Interact"],
                  "year": ["2013"],
                  "collaborators": ["Morris", "Danielescu","Fisher", "Lee", "schraefel","Wobbrock"]
@@ -84,7 +84,7 @@
          },
          {
              "tags": {
-                 "subject": ["Information"],
+                 "subject": ["UI-Information"],
                  "publication": ["Sigmod"],
                  "year": ["2013"],
                  "collaborators": ["Barnett", "Chandramouli","DeLine","Fisher", "Goldstein", "Morrison","Platt"]
@@ -100,7 +100,7 @@
          },
          {
              "tags": {
-                 "subject": ["Information", "Visualization", "Presentation"],
+                 "subject": ["UI-Information", "Visualization", "Presentation"],
                  "publication": ["Infovis"],
                  "year": ["2013"],
                  "collaborators": ["Hullman", "Riche","Fisher", "Adar","Lee"]
@@ -115,7 +115,7 @@
              "id": 0
          },
   {
-      "tags":{ "subject":["UI", "Information","Visualization","Touch"],
+      "tags":{ "subject":["UI-Information","Visualization","Touch"],
           "publication":["InternalReport"],
           "year":["2013"],
           "collaborators":["Fernandez","Fisher"]},
@@ -129,7 +129,7 @@
       "id":0
   },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Touch"],
+        "tags":{ "subject":["UI-Information", "Visualization","Touch"],
             "publication":["SIGCHI"],
             "year":["2013"],
             "collaborators":["Fisher","Sadana","Herron","schraefel"]},
@@ -143,7 +143,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Graphics","Photos"],
+        "tags":{ "subject":["UI-Information", "Graphics","Photos"],
             "publication":["UIST"],
             "year":["2012"],
             "collaborators":["Joshi","Metha","Stollnitz","Cohen","Hoppe","Uyttendaele"]},
@@ -185,7 +185,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Big Data"],
+        "tags":{ "subject":["UI-Information","Visualization","Big Data"],
             "publication":["SIGCHI"],
             "year":["2012"],
             "collaborators":["Fisher","Popov","schraefel"]},
@@ -199,7 +199,7 @@
         "id":0
     },
    {
-       "tags":{ "subject":["UI", "Information","Visualization","Temporal"],
+       "tags":{ "subject":["UI-Information","Visualization","Temporal"],
            "publication":["AVI"],
            "year":["2012"],
            "collaborators":["Zhao","Fisher","Brinkman"]},
@@ -213,7 +213,7 @@
        "id":0
    },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Big Data"],
+        "tags":{ "subject":["UI-Information","Visualization","Big Data"],
             "publication":["Interactions"],
             "year":["2012"],
             "collaborators":["Fisher","DeLine","Czerwinski"]},
@@ -227,7 +227,7 @@
         "id":0
     },
 {
-    "tags":{ "subject":["UI","Visualization","Machine Learning"],
+    "tags":{ "subject":["UI-Information","Visualization","Machine Learning"],
         "publication":["IJCAI"],
         "year":["2011"],
         "collaborators":["Patel","Kapoor","Fogarty","Ko", "Tan"]},
@@ -241,7 +241,7 @@
     "id":0
 },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Design"],
+        "tags":{ "subject":["UI-Information", "Visualization","Design"],
             "publication":["InternalReport"],
             "year":["2011"],
             "collaborators":["Fisher","Fernandez","Chen"]},
@@ -254,7 +254,7 @@
         "pabstract":"Finding ways for information workers to easily create and modify visualizations that display their own data has been a long time goal within the visualization community. We describe Vis-a-vis, a declarative language for defining and extending visualizations directly within spreadsheets. Vis-a-vis allows users to directly bind data and formula to the visual attributes of an extensible set of visualization primitives. The visualizations that Vis-a-vis creates can be shared and modified easily, allowing users to modify existing visualizations. This approach allows users to select visualizations from a gallery, to customize them easily, or to create novel visualizations. The approach leverages familiar formulas and data from spreadsheets. We prototype a system that uses this language, and use it to build a number of standard and custom visualizations, and gather formative feedback from a small user study.",
         "id":0
     },
-{           "tags":{ "subject":["UI","Visualization","Machine Learning"],
+{           "tags":{ "subject":["UI-Information","Visualization","Machine Learning"],
     "publication":["Interact"],
     "year":["2011"],
     "collaborators":["Fisher","Basu"]},
@@ -267,7 +267,7 @@
     "pabstract":"Sorting and clustering large numbers of documents can be an overwhelming task: manual solutions tend to be slow, while machine learning systems often present results that don‘t align well with users' intents. We created and evaluated a system for helping users sort large numbers of documents into clusters. iCluster has the capability to recommend new items for existing clusters and appropriate clusters for items. The recommendations are based on a learning model that adapts over time – as the user adds more items to a cluster, the system‘s model improves and the recommendations become more relevant. Thirty-two subjects used iCluster to sort hundreds of data items both with and without recommendations; we found that recommendations allow users to sort items more rapidly. A pool of 161 raters then assessed the quality of the resulting clusters, finding that clusters generated with recommendations were of statistically indistinguishable quality. Both the manual and assisted methods were substantially better than a fully automatic method.",
     "id":0
 },
-    {         "tags":{ "subject":["UI","Visualization"],
+    {         "tags":{ "subject":["UI-Information","Visualization"],
         "publication":["Infovis"],
         "year":["2010"],
         "collaborators":["Fisher","Fernandez","Ruble"]},
@@ -280,7 +280,7 @@
         "pabstract":"In order to use new visualizations, most toolkits require application developers to rebuild their applications and distribute new versions to users. The WebCharts Framework take a different approach by hosting Javascript from within an application and providing a standard data and events interchange.. In this way, applications can be extended dynamically, with a wide variety of visualizations. We discuss the benefits of this architectural approach, contrast it to existing techniques, and give a variety of examples and extensions of the basic system.",
         "id":0
     },
-{           "tags":{ "subject":["UI","Machine Learning"],
+{           "tags":{ "subject":["UI-Information","Machine Learning"],
     "publication":["AAAI"],
     "year":["2010"],
     "collaborators":["Fisher","Basu","Lu"]},
@@ -294,7 +294,7 @@
     "id":0
 },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Machine Learning","Programming"],
+        "tags":{ "subject":["UI-Information", "Visualization","Machine Learning","Programming"],
             "publication":["UIST"],
             "year":["2010"],
             "collaborators":["Patel","Bancroft","Fogarty","Ko", "Landay"]},
@@ -308,7 +308,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Visualization","Design","Search"],
+        "tags":{ "subject":["UI-Information", "Visualization","Design","Search"],
             "publication":["SIGCHI"],
             "year":["2009"],
             "collaborators":["Teevan","Cutrell","Fisher","Ramos", "Andre", "Hu"]},
@@ -322,7 +322,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Search"],
+        "tags":{ "subject":["UI-Information", "Search"],
             "publication":["SIGCHI"],
             "year":["2009"],
             "collaborators":["Dontcheva","Medynskiy"]},
@@ -336,7 +336,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Web"],
+        "tags":{ "subject":["UI-Information", "Web"],
             "publication":["SIGCHI"],
             "year":["2009"],
             "collaborators":["Toomim","Dontcheva","Rahimi","Thomson", "Landay"]},
@@ -350,7 +350,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Web"],
+        "tags":{ "subject":["UI-Information", "Web"],
             "publication":["InternalReport"],
             "year":["2009"],
             "collaborators":["Flake","Brewer"]},
@@ -364,7 +364,7 @@
         "id":0
     },
     {
-        "tags":{ "subject":["UI", "Information","Web"],
+        "tags":{ "subject":["UI-Information", "Web"],
             "publication":["InternalReport"],
             "year":["2009"],
             "collaborators":["Hydrie","Cutler","Oliveira","Bergeron", "Lakshmiratan"]},
@@ -378,7 +378,7 @@
         "id":0
     },
                 {
-                    "tags":{ "subject":["Visualization", "UI", "Photos"],
+                    "tags":{ "subject":["Visualization", "UI-Information", "Photos"],
                         "publication":["UIST"],
                         "year":["2008"],
                         "collaborators":["Cohen", "Luan", "Kopf", "Xu"]},
@@ -392,7 +392,7 @@
                     "id":0                                     
                 },
                 {
-                    "tags":{ "subject":["UI", "Photos"],
+                    "tags":{ "subject":["UI-Information", "Photos"],
                         "publication":["HCI"],
                         "year":["2008"],
                         "collaborators":["Elgart","Kamppari","Lewis","Prasad", "Rhee", "Satpathy"]},
@@ -406,7 +406,7 @@
                     "id":0
                 },
                 {              
-                    "tags":{ "subject":["Visualization", "UI", "Search"],                                           
+                    "tags":{ "subject":["Visualization", "UI-Information", "Search"],                                           
                         "publication":["UIST"],
                         "year":["2007"],
                         "collaborators":["Dontcheva", "Cohen", "Salesin"]},
@@ -420,7 +420,7 @@
                     "id":0
                 },
         {      
-            "tags":{ "subject":["Visualization", "UI", "Search","Web"],                                            
+            "tags":{ "subject":["Visualization", "UI-Information", "Search","Web"],                                            
                 "publication":["WWW"],
                 "year":["2007"],
                 "collaborators":["White"]},
@@ -434,7 +434,7 @@
             "id":0
         },
         {      
-            "tags":{ "subject":["Visualization", "UI", "Presentation","Temporal"],                                            
+            "tags":{ "subject":["Visualization", "UI-Information", "Presentation","Temporal"],                                            
                 "publication":["UIST"],
                 "year":["2006"],
                 "collaborators":["Petschnigg", "Agrawala"]},
@@ -447,7 +447,7 @@
             "pabstract":"Despite the ubiquity of slide presentations, managing multiple presentations remains a challenge. Understanding how multiple versions of a presentation are related to one another, assembling new presentations from existing presentations, and collaborating to create and edit presentations are difficult tasks. <br>  In this paper, we explore techniques for comparing and managing multiple slide presentations. We propose a general comparison framework for computing similarities and differences between slides. Based on this framework we develop an interactive tool for visually comparing multiple presentations. The interactive visualization facilitates understanding how presentations have evolved over time. We show how the interactive tool can be used to assemble new presentations from a collection of older ones and to merge changes from multiple presentation authors.",
             "id":0
         },
-                                {              "tags":{ "subject":["Visualization", "UI", "Web","Search"],
+                                {              "tags":{ "subject":["Visualization", "UI-Information", "Web","Search"],
                                     "publication":["UIST"],
                                     "year":["2006"],
                                     "collaborators":["Dontcheva", "Salesin", "Wade", "Cohen"]},
@@ -485,7 +485,7 @@
                                     "pabstract":"We present the 'Cartoon Animation Filter', a simple filter that takes an arbitrary input motion signal and modulates it in such a way that the output motion is more 'alive' or 'animated'. The filter adds a smoothed, inverted, and (sometimes) time shifted version of the second derivative (the acceleration) of the signal back into the original signal. Almost all parameters of the filter are automated. The user only needs to set the desired strength of the filter. The beauty of the animation filter lies in its simplicity and generality. We apply the filter to motions ranging from hand drawn trajectories, to simple animations within PowerPoint presentations, to motion captured DOF curves, to video segmentation results. Experimental results show that the filtered motion exhibits anticipation, follow-through, exaggeration and squash-and-stretch effects which are not present in the original input motion data.",
                                     "id":3
                                 },
-                                {              "tags":{ "subject":["UI", "Photos"],
+                                {              "tags":{ "subject":["UI-Information", "Photos"],
                                     "publication":["SIGCHI"],
                                     "year":["2006"],
                                     "collaborators":["Meyers","Brush","Smith","Czerwinski"]},
@@ -498,7 +498,7 @@
                                     "pabstract":"While applications are typically optimized for traditional desktop interfaces using a keyboard and mouse, there are a variety of compelling reasons to consider alternative input mechanisms that require more physical exertion, including promoting fitness, preventing Repetitive Strain Injuries, and encouraging fun. We chose to explore physical interfaces based on foot motion and have built two applications with Step User Interfaces: StepMail and StepPhoto. Both support working with email and photos using the dance pad made popular by the Dance Dance Revolution (DDR) game. Results of a formative evaluation with ten participants suggest that the interactions are intuitive to learn, somewhat enjoyable, and cause participants to increase their level of exertion over sitting at a desk. Our evaluation also revealed design considerations for Step User Interfaces, including balancing effort across the body, avoiding needless exertion, and choosing target applications with care.",
                                     "id":4
                                 },
-                                {              "tags":{ "subject":["UI", "Photos", "Visualization"],
+                                {              "tags":{ "subject":["UI-Information", "Photos", "Visualization"],
                                     "publication":["SIGCHI"],
                                     "year":["2005"],
                                     "collaborators":["Huynh","Baudisch","Wong"]},
@@ -525,7 +525,7 @@
                                     "pdf":"http://research.microsoft.com/~sdrucker/papers/photomontage.pdf",
                                     "id":6
                                 },
-                                {              "tags":{ "subject":["Animation", "UI", "Presentation"],
+                                {              "tags":{ "subject":["Animation", "UI-Information", "Presentation"],
                                     "publication":["DUX"],
                                     "year":["2005"],
                                     "collaborators":["Dontcheva","Cohen"]},
@@ -538,7 +538,7 @@
                                     "pdf":"http://research.microsoft.com/~sdrucker/papers/v4v.pdf",
                                     "id":7
                                 },
-                                {              "tags":{ "subject":["Graphics", "Photos","UI","Visualization"],
+                                {              "tags":{ "subject":["Graphics", "Photos","UI-Information","Visualization"],
                                     "publication":["AVI"],
                                     "year":["2004"],
                                     "collaborators":["Wong","Roseway","Glenner","De Mar"]},
@@ -552,7 +552,7 @@
                                     "pabstract":"Applying personal keywords to images and video clips makes it possible to organize and retrieve them, as well as automatically create thematically related slideshows. MediaBrowser is a system designed to help users create annotations by uniting a careful choice of interface elements, an elegant and pleasing design, smooth motion and animation, and a few simple tools that are predictable and consistent. The result is a friendly, useable tool for turning shoeboxes of old photos into labeled collections that can be easily browsed, shared, and enjoyed.",
                                     "id":8
                                 },
-                                {              "tags":{ "subject":["UI", "Photos"],
+                                {              "tags":{ "subject":["UI-Information", "Photos"],
                                     "publication": ["InternalReport"],
                                     "year":["2003"],
                                     "collaborators":["Wong","Roseway","Glenner","De Mar"]},
@@ -564,7 +564,7 @@
                                     "pabstract":"The Photo-triage application is meant to be an essential part of the digital photography lifestyle. It can fit as a component wherever photo management is done (shell, picture-it, media-center, etc.). The central idea is to facilitate rapid, convenient categorization of one's personal photos into at least the following categories: hidden/private, majority, highlights, best and/or representative. See figure 1. This application is meant to fill an empty niche in the usage of digital photos: that is, there's no easy way add metadata to photos to mark them for printing, for sharing, or for slideshows without creating separate versions of the photos and copying into separate folders. We propose a sorting metaphor that will add implicit metadata when one first goes through the photos. ",
                                     "id":9
                                 },
-                                {              "tags":{ "subject":["UI", "Information","Visualization","Movies"],
+                                {              "tags":{ "subject":["UI-Information", "UI-Information","Visualization","Movies"],
                                     "publication": ["InternalReport"],
                                     "year":["2003"],
                                     "collaborators":["Roseway","De Mar","Wong"]},
@@ -577,7 +577,7 @@
                                     "id":10
                                 },
                                 {
-                                    "tags":{  "subject":["UI", "Visualization","Information"],
+                                    "tags":{  "subject":["UI-Information", "Visualization","UI-Information"],
                                         "publication":["InternalReport"],
                                         "year":["2003"],
                                         "collaborators":["Wong"]},
@@ -589,7 +589,7 @@
                                     "pabstract": "The concept of 6 degrees separation (6 DOS) can be applied to many different domains. As demonstrated in the MediaVariations Browser, movies can easily be browsed using clusters of related movies using the actor and director to help associate movies. Looking at people is even more natural for this type of browsing, since that is what the concept of 6 DOS is usually associated with. The PeopleBrowser uses a person's rank within an organization, their management chain, their peers (under the same manager), their direct reports, and people with their same title, to help browse through an organization. Other clusters could also easily be used, including those people on the same mailing list, frequently mailed, etc. This project was done in conjunction with the Shell MSX team (Hillel Cooperman, Rob Girling, and Jeni Sadler).",
                                     "id": 11
                                 },                             
-                                {              "tags":{ "subject":["UI","TV","Media"],
+                                {              "tags":{ "subject":["UI-Information","TV","Media"],
                                     "publication":["SIGCHI"],
                                     "year":["2002"],
                                     "collaborators":["Roseway","De Mar","Wong"]},                              
@@ -602,7 +602,7 @@
                                     "pabstract":"In this paper, we describe an interface for browsing and skipping digital video content in a consumer setting; that is, sitting and watching television from a couch using a standard remote control. We compare this interface with two other interfaces that are in common use today and found that subjective satisfaction was statistically better with the new interface. Performance metrics however, like time to task completion and number of clicks were worse.",
                                     "id":11
                                 },
-                                {              "tags":{ "subject":["Graphics", "UI", "Movies","Visualization"],
+                                {              "tags":{ "subject":["Graphics", "UI-Information", "Movies","Visualization"],
                                     "publication":["DUX"],
                                     "year":["2005"],
                                     "collaborators":["Regan","Roseway","Lofstrom"]},
@@ -615,7 +615,7 @@
                                     "pabstract":"We present the Visual Decision Maker (VDM), an application that gives movie recommendations to groups of people sitting together. The VDM provides a TV like user experience: a stream of movie stills flows towards the center of the screen, and users press buttons on remote controls to vote on the currently selected movie. A collaborative filtering engine provides recommendations for each user and for the group as a whole based on the votes. Three principles guided our design of the VDM: shared focus, dynamic pacing, and encouraging conversations. In this paper we present the results of a four month public installation and a lab study showing how these design choices affected people's usage and people's experience of the VDM. Our results show that shared focus is important for users to feel that the group's tastes are represented in the recommendations.",
                                     "id":12
                                 },
-                                {              "tags":{ "subject":["Graphics", "UI", "Games"],
+                                {              "tags":{ "subject":["Graphics", "UI-Information", "Games"],
                                     "publication": ["InternalReport"],
                                     "year":["2003"],
                                     "collaborators":["He","Cohen","Gupta","Wong","Roseway","De Mar"]},
@@ -628,7 +628,7 @@
                                     "pabstract":"Networked multiplayer games are becoming tremendously popular. At any given moment on the Microsoft Game Zone (http://zone.msn.com), there are thousands of people playing Asheron's Call or Age of Empires. Traditional board and card games are also increasingly being played online and will continue to gain in popularity. While networked games are certainly fun for active players, there is potentially a much larger audience: spectators. In most traditional games, such as football, the number of spectators far exceeds the number of players. The key idea presented in this paper is to tap this potential by making online games engaging and entertaining to non-players watching these games. <br> The experience for spectators can be made much richer by employing techniques often used in sports broadcasting, such as a commentator providing analysis and background stories, slow motion and instance replay. For 3D games, cinematic camera movements and shot cuts be much more visually interesting than the first-person views often provided to the players. There is the potential to significantly increase the 'eyeballs' on sites such as Microsoft Game Zone. Spectators can be more easily targeted for advertising. Finally, supporting the spectator experience will help drive sales of the games themselves as casual viewers take the next step to become players. Watching others play networked games has the potential to become a vital component to an overall entertainment/media strategy. The authors of this document have already developed significant technologies needed to support the online game spectator. We propose that new resources be devoted now to carry these technologies into practice.",
                                     "id":13
                                 },
-                                {              "tags":{ "subject":["Graphics", "UI", "Games", "Thesis"],
+                                {              "tags":{ "subject":["Graphics", "UI-Information", "Games", "Thesis"],
                                     "publication": ["InternalReport"],
                                     "year":["2003"],
                                     "collaborators":["He","Cohen","Gupta","Wong","De Mar"]},
@@ -643,7 +643,7 @@
                                 },
                                 {
                                     "tags": {
-                                        "subject": ["UI", "Media","Search","Information"],
+                                        "subject": ["UI-Information", "Media","Search"],
                                         "publication": ["Multimedia"],
                                         "year": ["2002"],
                                         "collaborators": ["Gemmell", "Bell","Lueder", "Wong"]
@@ -656,7 +656,7 @@
                                     "pabstract": "MyLifeBits is a project to fulfill the Memex vision first posited by Vannevar Bush in 1945. It is a system for storing all of one’s digital media, including documents, images, sounds, and videos. It is built on four principles: (1) collections and search must replace hierarchy for organization (2) many visualizations should be supported (3) annotations are critical to non-text media and must be made easy, and (4) authoring should be via transclusion.",
                                     "id": 15
                                 },
-                                {              "tags":{ "subject":["UI", "TV","Media"],
+                                {              "tags":{ "subject":["UI-Information", "TV","Media"],
                                     "publication": ["InternalReport"],
                                     "year":["2002"],
                                     "collaborators":["Wong","Roseway"]},
@@ -669,7 +669,7 @@
                                     "id":15
                                 },
                                 {
-                                    "tags":{  "subject":["UI", "TV"],
+                                    "tags":{  "subject":["UI-Information", "TV"],
                                         "publication":["InternalReport"],
                                         "year":["2002"],
                                         "collaborators":["Wong","Flora"]},
@@ -683,7 +683,7 @@
                                 },                             
                                 {
                                     "tags": {
-                                        "subject": ["UI", "TV", "Media"],
+                                        "subject": ["UI-Information", "TV", "Media"],
                                     "publication": ["InternalReport"],
                                     "year":["2001"],
                                     "collaborators":["Wong"]},
@@ -696,7 +696,7 @@
                                     "pabstract":"TV Tokens (GUID for a specific broadcast program or movie) can be embedded in any website, EPG or email, downloaded and shared between friends to send to respective PVR's to schedule recording of show. TokenTV service (dot.NET TV) converts GUID to resolve to local schedule information needed to program the PVR. Any content based website (i.e.: IBDB.com, PBS.org, AFI.org) could have tokens to download to PVR for recording specific content.",
                                     "id":16
                                 },
-                                {              "tags":{ "subject":["UI", "TV","Media"],
+                                {              "tags":{ "subject":["UI-Information", "TV","Media"],
                                     "publication": ["InternalReport"],
                                     "year":["2001"],
                                     "collaborators":["Wong"]},
@@ -720,7 +720,7 @@
                                     "pabstract":"As we begin to create synthetic characters (avatars) for computer users, it is important to pay attention to both the look and the behavior of the avatar's eyes. In this paper we present behavior models of eye gaze patterns in the context of real-time verbal communication. We apply these eye gaze models to simulate eye movements in a computer-generated avatar in a number of task settings. We also report the results of an experiment that we conducted to assess whether our eye gaze model induces changes in the eye gaze behavior of an individual who is conversing with an avatar.",
                                     "id":19
                                 },
-                                {              "tags":{ "subject":["UI", "Education", "Social"],
+                                {              "tags":{ "subject":["UI-Information", "Education", "Social"],
                                     "publication": ["InternalReport"],
                                     "year":["2001"],
                                     "collaborators":["Chesley","Gupta","Kimberly","White"]},
@@ -732,7 +732,7 @@
                                     "pabstract":"Computer intra- and internets are widely used for client-server application such as web browsers. With the exception of e-mail, however, the same networks are seldom used for distributed, client-client or client-server-client applications. Such applications are difficult to develop and debug, and require a supporting infrastructure that is not readily available from existing systems. Flatland is a rapid prototyping environment that provides the underlying infrastructure and makes it easy to create and debug distributed internet application prototypes. In addition to the infrastructure needed for a distributed application, Flatland includes safe implementations of the most common sources of distributed application bugs, asynchronous operation and updating. Flatland also supports streaming audio-video and down-level clients.",
                                     "id":20
                                 },
-                                {              "tags":{ "subject":["UI", "Social"],
+                                {              "tags":{ "subject":["UI-Information", "Social"],
                                     "publication":["UIST"],
                                     "year":["1999"],
                                     "collaborators":["Vronay","Smith"]},
@@ -954,7 +954,7 @@
                                       "pabstract": "This paper discusses the design of a contact sensor for use with the Utah-MIT dexterous hand [Jacobsen, et al. 1984]. The sensor utilizes an 8x8 array of capacitive cells. This paper extends the work presented in Siegel and Garabiet [1986], and the ealier work of Boie [1984]; a more detailed design analysis, modifications to the construction process, and better performance results are shown.",
                                       "id": 33
                                   },
-                                {              "tags":{ "subject":["Hyptertext", "UI","Information"],
+                                {              "tags":{ "subject":["Hypertext", "UI-Information"],
                                     "publication":["IEEE"],
                                     "year":["1988"],
                                     "collaborators":["Yankelovich","Haan", "Meyrowitz"]},
@@ -966,7 +966,7 @@
                                     "pabstract":"none",
                                     "id":34
                                 },
-                                {              "tags":{ "subject":["Hyptertext", "UI","Information"],
+                                {              "tags":{ "subject":["Hypertext", "UI-Information"],
                                     "publication":["ICSS"],
                                     "year":["1988"],
                                     "collaborators":["Yankelovich", "Haan"]},
